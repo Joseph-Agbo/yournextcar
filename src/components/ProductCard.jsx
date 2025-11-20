@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function formatPrice(p) {
   const price = Number(p)
@@ -18,7 +19,7 @@ export default function ProductCard({ product }) {
   if (!product) return null
 
   return (
-    <article className="border rounded-md p-3 shadow-sm bg-white text-slate-800">
+    <Link to={`/productdetail/${product.id}`} className="border shrink-0 rounded-md p-3 shadow-sm bg-white text-slate-800 md:transform md:hover:scale-105 md:transition-all duration-200 ease-in-out">
       <div className="h-40 w-full mb-2 overflow-hidden rounded">
         <img
           src={product.img}
@@ -26,12 +27,12 @@ export default function ProductCard({ product }) {
           className="w-full h-full object-cover"
         />
       </div>
-  <h3 className="font-semibold text-lg text-blue-950">{product.name}</h3>
+      <h3 className="font-semibold text-lg text-blue-950">{product.name}</h3>
       <p className="text-sm text-slate-500">{product.brand}</p>
-  <p className="mt-2 font-bold text-blue-950">{formatPrice(product.price)}</p>
+      <p className="mt-2 font-bold text-blue-950">{formatPrice(product.price)}</p>
       {product.description && (
         <p className="text-sm mt-2 text-slate-600">{product.description}</p>
       )}
-    </article>
+    </Link>
   )
 }

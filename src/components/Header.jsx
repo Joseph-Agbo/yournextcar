@@ -9,8 +9,8 @@ function Header() {
   const deskOptions = (
     <div className="flex justify-around items-center w-full text-teal-950">
       <Link to="/" className="px-8 border-r-2 border-gray-500 pb-1 inline-block md:hover:border-r-0 md:hover:border-b-8 md:hover:border-blue-950 transition-all duration-200">Home</Link>
-      <a href="/new-cars" className="px-4 border-r-2 border-gray-500 pb-1 inline-block md:hover:border-r-0 md:hover:border-b-8 md:hover:border-blue-950 transition-all duration-200">New Cars</a>
-      <a href="/used-cars" className="px-4 border-r-2 border-gray-500 inline-block pb-1 md:hover:border-r-0 md:hover:border-b-8 md:hover:border-blue-950 transition-all duration-200">Used Cars</a>
+      <Link to="/newcars" className="px-4 border-r-2 border-gray-500 pb-1 inline-block md:hover:border-r-0 md:hover:border-b-8 md:hover:border-blue-950 transition-all duration-200">New Cars</Link>
+      <Link to="/usedcars" className="px-4 border-r-2 border-gray-500 inline-block pb-1 md:hover:border-r-0 md:hover:border-b-8 md:hover:border-blue-950 transition-all duration-200">Used Cars</Link>
       <a href="/login" className="px-4 border-r-2 border-gray-500 inline-block pb-1 md:hover:border-r-0 md:hover:border-b-8 md:hover:border-blue-950 transition-all duration-200">Login</a>
       <a href="/signup" className="px-4 md:hover:border-b-8 pb-1 inline-block md:hover:border-blue-950 transition-all duration-200">Sign Up</a>
     </div>
@@ -33,9 +33,9 @@ function Header() {
    </div>
    <div className={`flex flex-col items-center gap-1 text-sm overflow-hidden transition-all duration-300 ${isMenuOpen ? "h-28 opacity-100 bg-linear-to-r from-gray-50 to-indigo-50" : "h-0 opacity-0"} md:hidden`}>
     <Link to="/" className="text-indigo-800 transition-colors duration-200">Home</Link>
-    <a href="#newcars" className="text-indigo-800 transition-colors duration-200">New Cars</a>
-    <a href="#usedcars" className="text-indigo-800 transition-colors duration-200">Used Cars</a>
-    <a href="#login" className="text-indigo-800 transition-colors duration-200">Login/Sign Up</a>
+    <Link to="/newcars" className="text-indigo-800 transition-colors duration-200">New Cars</Link>
+    <Link to="/usedcars" className="text-indigo-800 transition-colors duration-200">Used Cars</Link>
+    <Link to="/mobileform" className="text-indigo-800 transition-colors duration-200">Login/Sign Up</Link>
    </div>
   </div> 
   );
