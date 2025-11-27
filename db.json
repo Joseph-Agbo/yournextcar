@@ -11,6 +11,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/2018hyundaitucson.jpeg",
     "description": "Hyundai Tucson is a compact SUV that combines style, comfort, and advanced technology."
   },
@@ -25,6 +26,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/2022fordranger.jpeg",
     "description": "The 2022 Ford Ranger is a rugged midsize pickup truck known for its off-road capabilities and towing capacity." 
   },
@@ -39,6 +41,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/2025toyotajeep.jpeg",
     "description": "The 2025 Toyota Jeep is a versatile SUV designed for both urban driving and off-road adventures." 
   },
@@ -53,6 +56,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/bluetoyota.jpeg",
     "description": "This blue Toyota offers a blend of reliability and efficiency, perfect for everyday commuting." 
   },
@@ -67,6 +71,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/ferrari.jpeg",
     "description": "This red ferrari is a symbol of luxury and high performance, delivering an exhilarating driving experience." 
   },
@@ -81,6 +86,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/ferrarihybrid.jpeg",
     "description": "Ferrari Hybrid is a higher level of Ferrari models." 
   },
@@ -95,6 +101,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/fordbiturbo.jpeg",
     "description": "Ford Biturbo is a powerful and efficient vehicle designed for performance enthusiasts." 
   },
@@ -109,6 +116,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/fordranger.jpeg",
     "description": "Ford Ranger is the ultimate combination of strength, capability, and versatility for all your driving needs." 
   },
@@ -123,6 +131,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/graytoyota.jpeg",
     "description": "This Gray Toyota is good for daily use and offers excellent fuel efficiency." 
   },
@@ -137,6 +146,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/graytoyotacamry.jpeg",
     "description": "This particular Toyota Camry is known for its comfortable ride and advanced safety features." 
   },
@@ -151,6 +161,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/hyundai4x4.jpeg",
     "description": "Hyundai4x4 is a robust vehicle designed for off-road adventures and challenging terrains." 
   },
@@ -165,6 +176,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/hyundaifiyatlari.jpeg",
     "description": "This version of Hyundai offers great value and good interior designs" 
   },
@@ -179,6 +191,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/hyundaijeep.jpeg",
     "description": "Hyundai Jeep is a sturdy SUV built for both city driving and off-road experiences." 
   },
@@ -193,6 +206,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/hyundaisantafe.jpeg",
     "description": "Hyundai Santa Fe is a spacious and comfortable SUV perfect for family trips" 
   },
@@ -207,6 +221,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/hyundaisuv.jpeg",
     "description": "A special type of Hyundai SUV suitable for exotic uses" 
   },
@@ -221,6 +236,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/hyundaitucson.jpeg",
     "description": "Designed for it's fancy nature and style." 
   },
@@ -235,6 +251,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/lamborghiniaventador.jpeg",
     "description": "Aventador is a high-performance sports car known for its striking design and powerful V12 engine." 
   },
@@ -249,6 +266,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": true,
     "img": "/newcars/lamborghinihybrid.jpeg",
     "description": "This hybrid version of Lamborghini offers a blend of performance and efficiency amidst it's outstanding design." 
   },
@@ -263,6 +281,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/lexus.jpeg",
     "description": "This is a milk-colored Lexus known for its luxury and smooth performance." 
   },
@@ -277,6 +296,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/lexusluxurysuv.jpeg",
     "description": "Like the name suggests, this Lexus Luxury SUV offers premium features and exceptional comfort for an elevated driving experience." 
   },
@@ -291,6 +311,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/lexuslx600.jpeg",
     "description": "Lexus Lx-600 is a high-class SUV designed for top-level performance." 
   },
@@ -305,6 +326,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/lexusrx.jpeg",
     "description": "Lexus Rx is a stylish and comfortable SUV that offers a smooth ride" 
   },
@@ -319,6 +341,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": true,
     "img": "/newcars/lightbrowntoyota.jpeg",
     "description": "This Toyota has a beautiful light brown color, making it stand out on the road." 
   },
@@ -333,6 +356,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/milkcolorpeugeot.jpeg",
     "description": "A milk colored Peugeot that combines elegance with performance." 
   },
@@ -347,6 +371,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/peugeot3008.jpeg",
     "description": "Peugeot3008 is a stylish and versatile SUV that offers comfortability" 
   },
@@ -361,6 +386,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": true,
     "img": "/newcars/peugeote208.jpeg",
     "description": "Peugeot e-208 is known for it's interior space and compatibility" 
   },
@@ -375,6 +401,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/peugeotev.jpeg",
     "description": "Peugeot EV is a very fancy token from Peugeot Company." 
   },
@@ -389,6 +416,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/peugeotrcz.jpeg",
     "description": "This white RCZ is a portable car from Peugeot Company. it's for personal use" 
   },
@@ -403,6 +431,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/peugeotsportscar.jpeg",
     "description": "A high-performance sportscar from Peugeot which comprises of elevated speed and comfort." 
   },
@@ -417,6 +446,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/redtoyotacamry.jpeg",
     "description": "Designed with a focus on comfort and efficiency, this Red Toyota Camry is perfect for daily activities." 
   },
@@ -431,6 +461,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/southhyundaisuv.jpeg",
     "description": "A big body SUV specially made for southern regions due to it's strong body parts." 
   },
@@ -445,6 +476,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newcars/toyotahilux.jpeg",
     "description": "Toyota Hilux is a durable and reliable pickup truck known for its toughness and capabilities." 
   },
@@ -459,6 +491,7 @@
     "new cars": false,
     "used cars": true,
     "allcars": true,
+    "paid": false,
     "img": "/usedcars/bigkiaseltos.jpeg",
     "description": "Kia Motors presents the Big Kia Seltos, a spacious and feature-packed SUV designed for comfort and versatility." 
   },
@@ -473,6 +506,7 @@
     "new cars": false,
     "used cars": true,
     "allcars": true,
+    "paid": false,
     "img": "/usedcars/blackkiamotor.jpeg",
     "description": "A black kia motor vehicle known for its sleek design and efficient performance." 
   },
@@ -487,6 +521,7 @@
     "new cars": false,
     "used cars": true,
     "allcars": true,
+    "paid": false,
     "img": "/usedcars/blacknissan.jpeg",
     "description": "A black-colored Nissan that combines style and reliability for everyday driving." 
   },
@@ -501,6 +536,7 @@
     "new cars": false,
     "used cars": true,
     "allcars": true,
+    "paid": false,
     "img": "/usedcars/graytoyotacorolla.jpeg",
     "description": "This gray toyota corolla conserves petrol and it's perfect for city driving." 
   },
@@ -515,6 +551,7 @@
     "new cars": false,
     "used cars": true,
     "allcars": true,
+    "paid": false,
     "img": "/usedcars/kiacuzin.jpeg",
     "description": "Kia Cuzin is a compact and efficient vehicle designed for urban commuting." 
   },
@@ -529,6 +566,7 @@
     "new cars": false,
     "used cars": true,
     "allcars": true,
+    "paid": false,
     "img": "/usedcars/kianapleton.jpeg",
     "description": "Napleton is a Kia model built for flexing and show-off purposes." 
   },
@@ -543,6 +581,7 @@
     "new cars": false,
     "used cars": true,
     "allcars": true,
+    "paid": false,
     "img": "/usedcars/kiapicanto.jpeg",
     "description": "Kia Picanto is a compact hatchback known for its agility and petrol efficiency." 
   },
@@ -557,6 +596,7 @@
     "new cars": false,
     "used cars": true,
     "allcars": true,
+    "paid": false,
     "img": "/usedcars/kiaseltos.jpeg",
     "description": "Kia Seltos makes a great choice for those seeking a stylish and practical SUV." 
   },
@@ -571,6 +611,7 @@
     "new cars": false,
     "used cars": true,
     "allcars": true,
+    "paid": false,
     "img": "/usedcars/nissan370z.jpeg",
     "description": "The 370z model from Nissan is a sporty coupe that delivers thrilling performance and sharp handling." 
   },
@@ -585,6 +626,7 @@
     "new cars": false,
     "used cars": true,
     "allcars": true,
+    "paid": false,
     "img": "/usedcars/nissan2021.jpeg",
     "description": "The 2021 model of Nissan offers a blend of modern design and advanced technology features." 
   },
@@ -599,6 +641,7 @@
     "new cars": false,
     "used cars": true,
     "allcars": true,
+    "paid": false,
     "img": "/usedcars/nissanmurano.jpeg",
     "description": "Nissan Murano is a midsize SUV known for its comfortable ride and upscale interior." 
   },
@@ -613,6 +656,7 @@
     "new cars": false,
     "used cars": true,
     "allcars": true,
+    "paid": false,
     "img": "/usedcars/nissannismo.jpeg",
     "description": "This Nissan Nismo has a white pretty body and it's built for speed enthusiasts." 
   },
@@ -627,6 +671,7 @@
     "new cars": false,
     "used cars": true,
     "allcars": true,
+    "paid": false,
     "img": "/usedcars/nissanqashqai.jpeg",
     "description": "This model of Nissan Qashqai is perfect for urban driving and weekend getaways." 
   },
@@ -641,6 +686,7 @@
     "new cars": false,
     "used cars": true,
     "allcars": true,
+    "paid": false,
     "img": "/usedcars/peugeot206.jpeg",
     "description": "Peugeot 206 is built for beauty and luxurious use. This particular one has a good body color." 
   },
@@ -655,6 +701,7 @@
     "new cars": false,
     "used cars": true,
     "allcars": true,
+    "paid": false,
     "img": "/usedcars/peugeot308.jpeg",
     "description": "Peugeot308 is a well-endowed Suv meant for family use and outings." 
   },
@@ -669,6 +716,7 @@
     "new cars": false,
     "used cars": true,
     "allcars": true,
+    "paid": false,
     "img": "/usedcars/peugeot508.jpeg",
     "description": "508 model of Peugeot is a stylish sedan that's built on a high capacity engine." 
   },
@@ -683,6 +731,7 @@
     "new cars": false,
     "used cars": true,
     "allcars": true,
+    "paid": false,
     "img": "/usedcars/peugeot2008.jpeg",
     "description": "This Peugeot is a model from 2008 known for its compact size and quality performance." 
   },
@@ -697,6 +746,7 @@
     "new cars": false,
     "used cars": true,
     "allcars": true,
+    "paid": false,
     "img": "/usedcars/redtoyota.jpeg",
     "description": "This red Toyota is perfectly built with stylish designs and well-relaxing seats/interiors." 
   },
@@ -711,6 +761,7 @@
     "new cars": false,
     "used cars": true,
     "allcars": true,
+    "paid": false,
     "img": "/usedcars/toyotacorolla.jpeg",
     "description": "This white Toyota Corolla has a good body structure and strong engine reputation." 
   },
@@ -725,6 +776,7 @@
     "new cars": false,
     "used cars": true,
     "allcars": true,
+    "paid": false,
     "img": "/usedcars/toyotafindlay.jpeg",
     "description": "Toyota Findlay is a reliable and speed efficient car designed for everyday use." 
   },
@@ -739,6 +791,7 @@
     "new cars": true,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newinventory/2025glimpse.jpeg",
     "description": "This car is a brand new made SUV which was produced this year" 
   },
@@ -753,6 +806,7 @@
     "new cars": false,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newinventory/2025grr.jpeg",
     "description": "The GRR just arrived in October, it has trended for it's first month and still riding" 
   },
@@ -767,6 +821,7 @@
     "new cars": false,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newinventory/bluesmag.jpeg",
     "description": "The blue smag is a baby sports car. it enjoys speed at it's best" 
   },
@@ -781,6 +836,7 @@
     "new cars": false,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newinventory/darkbluemag.jpeg",
     "description": "This darkbluemag makes it easy for comfort and a smooth ride" 
   },
@@ -795,6 +851,7 @@
     "new cars": false,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newinventory/pinkbarbie.jpeg",
     "description": "Like the display transits, she is a barbie indeed, meant for personal racing adventures" 
   },
@@ -809,6 +866,7 @@
     "new cars": false,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newinventory/topgear.jpeg",
     "description": "This red-colored new model is designed with strong and fancy body-type" 
   },
@@ -823,6 +881,7 @@
     "new cars": false,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newinventory/whiterz4.jpeg",
     "description": "RZ4 is conducive for nice interiors and enough air-conditioning for the inside " 
   },
@@ -837,6 +896,7 @@
     "new cars": false,
     "used cars": false,
     "allcars": true,
+    "paid": false,
     "img": "/newinventory/yellowradical.jpeg",
     "description": "This beauty is a sportscar built with high-level engine which makes it reliable for off-road activities" 
   },
@@ -851,6 +911,7 @@
     "new cars": false,
     "used cars": true,
     "allcars": false,
+    "paid": false,
     "img": "/usedcars/toyotamovel.jpeg",
     "description": "Toyota Movel is a used car that offers great value for its price, with a comfortable interior and reliable performance." 
   }

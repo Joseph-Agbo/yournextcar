@@ -7,22 +7,32 @@ import { useState } from "react";
 import { AiOutlineEye } from "react-icons/ai";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 
-function MobileForm() {
-  const [showPassword, setShowPassWord] = useState(false);
+function SignUpForm() {
+  const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [passWord, setPassWord] = useState("");
+  const [confirmPass, setConfirmPass] = useState("");
+  const [showPassword, setShowPassWord] = useState(false);
 
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
+  const [confirmError, setConfirmError] = useState("");
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[^A-Za-z0-9]).+$/;
+
+  const retrieveFullName = (e) => {
+    setFullName(e.target.value);
+  };
 
   const retrieveEmail = (e) => {
     setEmail(e.target.value);
   };
   const retrievePassWord = (e) => {
     setPassWord(e.target.value);
+  };
+  const retrieveconfirmPass = (e) => {
+    setConfirmPass(e.target.value);
   };
 
   const handleSubmit = (e) => {
@@ -32,6 +42,7 @@ function MobileForm() {
 
     setEmailError("");
     setPasswordError("");
+    setConfirmError("");
 
     if (!email) {
       setEmailError("You have not entered an email");
@@ -52,21 +63,41 @@ function MobileForm() {
       valid = false;
     }
 
+    if (!confirmPass) {
+      setConfirmError("please confirm your password");
+      valid = false;
+    } else if (confirmPass !== passWord) {
+      setConfirmError("passwords do not match");
+      valid = false;
+    }
+
     if (!valid) return;
 
-    alert("Login successfull!");
+    alert("Form submitted successfully!");
 
+    setFullName("");
     setEmail("");
     setPassWord("");
+    setConfirmPass("");
   };
 
   return (
     <div className="flex flex-col gap-4 items-center">
-      <h2 className="text-xl font-semibold">Log in or sign up</h2>
-      <hr className="w-full leading-1.0" />
       <div className="mx-auto">
-        <h1 className="py-4 px-2 text-lg">Welcome to YNC</h1>
-        <form onSubmit={handleSubmit} className="mb-5 flex flex-col gap-4 items-center">
+        <h1 className="py-7 px-2 text-lg text-center font-bold text-blue-900">
+          Welcome to YNC
+        </h1>
+        <form
+          onSubmit={handleSubmit}
+          className="mb-5 flex flex-col gap-4 items-center"
+        >
+          <input
+            type="text"
+            value={fullName}
+            onChange={retrieveFullName}
+            placeholder="Enter your fullname"
+            className="w-[95%] p-3 border rounded-md bg-white text-blue-950 text-md outline-blue-950"
+          />
           <input
             type="email"
             value={email}
@@ -94,16 +125,35 @@ function MobileForm() {
               {showPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
             </button>
           </div>
+          <div className="relative w-[95%]">
+            <input
+              type={showPassword ? "text" : "password"}
+              value={confirmPass}
+              onChange={retrieveconfirmPass}
+              placeholder="Confirm your password"
+              className="w-full p-3 border rounded-md bg-white text-blue-950 text-md outline-blue-950"
+            />
+            {confirmError && (
+              <p className="text-red-500 text-sm">{confirmError}</p>
+            )}
+            <button
+              type="button"
+              onClick={() => setShowPassWord(!showPassword)}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-xl text-blue-900"
+            >
+              {showPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
+            </button>
+          </div>
           <button
             type="submit"
-            className="w-[95%] border rounded-md text-white bg-blue-950 text-lg p-3"
+            className="w-[95%] cursor-pointer border rounded-md text-white bg-blue-950 text-lg p-3"
           >
-            Continue
+            Sign up
           </button>
           <p className="text-blue-950 text-md">
-            Don't have an account with us?{" "}
-            <Link to="/signupform" className="underline">
-              Sign up
+            Already have an account with us?{" "}
+            <Link to="/loginform" className="underline cursor-pointer">
+              Sign in
             </Link>{" "}
           </p>
         </form>
@@ -139,4 +189,4 @@ function MobileForm() {
   );
 }
 
-export default MobileForm;
+export default SignUpForm;

@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { FaNairaSign } from "react-icons/fa6";
 import RelatedProducts from '../components/RelatedProducts';
+import { Link } from "react-router-dom";
 
 function ProductDetail() {
     const param = useParams()
@@ -23,7 +24,7 @@ function ProductDetail() {
                 <h1 className='font-bold text-xl text-blue-950'>{specificProduct?.name}</h1>
                 <p className='text-slate-600'>{specificProduct?.description}</p>
                 <p className='text-blue-950 flex items-center font-bold text-lg'><FaNairaSign />{specificProduct?.price}</p>
-                <button type='button' className='border rounded-sm w-full text-md p-2 bg-blue-950 text-white md:p-3 md:w-[80%]'>Buy Now</button>
+                <Link to={`/checkout/${specificProduct?.id}`} ><button type='button' className='border rounded-sm w-full text-md p-2 bg-blue-950 text-white md:p-3 md:w-[80%] md:cursor-pointer'>Buy Now</button></Link>
             </div>
         </div>
         <RelatedProducts currentProductId={specificProduct?.id} currentProductBrand={specificProduct?.brand} />
