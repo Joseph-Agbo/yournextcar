@@ -2,6 +2,8 @@ import React from 'react'
 import { useContext } from 'react'
 import ShopContext from '../context/ShopContext';
 import ProductCard from '../components/ProductCard';
+import { Link } from 'react-router-dom';
+import { CgProfile } from "react-icons/cg";
 
 function UsedCars() {
     const { products } = useContext(ShopContext);
@@ -18,6 +20,11 @@ function UsedCars() {
                 <ProductCard key={product.id} product={product} />
             ))}
         </div>
+        <Link to="/profile">
+            <div className="border border-pink-950 w-[20%] rounded-md flex justify-center items-center p-4 bg-pink-950 fixed top-1/2 left-3.5 z-10 md:size-20 md:w-[9%] ">
+                <CgProfile className="size-10 bg-gray-200 text-teal-800 rounded-lg max-[330px]:size-8" />
+            </div>
+        </Link>
     </div>
   )
 }

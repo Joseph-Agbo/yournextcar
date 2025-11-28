@@ -106,7 +106,7 @@ function LoginForm() {
             Sign up
           </Link>{" "}
         </p>
-        <Link to="/" className="relative z-10 left-58 bottom-95" type="button">
+        <Link to="/" title="Home" className="relative z-10 left-58 bottom-95" type="button">
           <ImCancelCircle className="size-8 bg-gray-50 text-gray-500" />
         </Link>
       </form>

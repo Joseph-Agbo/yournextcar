@@ -10,9 +10,9 @@ function Header() {
   const isLoginForm = location.pathname === "/loginform";
   const isSignupForm = location.pathname === "/signupform";
   const isCheckoutForm = location.pathname.startsWith("/checkout");
-  const isProfilePage = location.pathname === "/profile"
+  const isProfilePage = location.pathname === "/profile";
 
-  const deskOptions = (
+  const deskOptions = !isProfilePage && (
     <div className="flex justify-around items-center w-full text-teal-950">
       <Link
         to="/"
@@ -50,10 +50,14 @@ function Header() {
   return (
     <div
       className={`${
-        ( isMobileForm || isLoginForm || isSignupForm || isCheckoutForm || isProfilePage )
+        isMobileForm ||
+        isLoginForm ||
+        isSignupForm ||
+        isCheckoutForm ||
+        isProfilePage
           ? ""
           : "border-gray-300 shadow-lg shadow-gray-400/65"
-      } md:h-24`}
+      } ${isProfilePage ? "" : "md:h-24"}`}
     >
       <div className="flex justify-between">
         <div
@@ -63,12 +67,23 @@ function Header() {
               : "flex items-center justify-start"
           }`}
         >
-          <img src="/images/carlogo.jpeg" alt="Carlogo" className="w-5% h-24" />
-          <h1 className="text-[1rem] md:text-xl text-blue-950 font-bold">
-            YourNextCar
-          </h1>
+          {!isProfilePage && (
+            <img src="/images/carlogo.jpeg" alt="Carlogo" className="h-24" />
+          )}
+          {isProfilePage && (
+            <img
+              src="/images/carlogo.jpeg"
+              alt="Carlogo"
+              className="h-24 max-[430px]:block hidden"
+            />
+          )}
+          {!isProfilePage && (
+            <h1 className="text-[1rem] md:text-xl text-blue-950 font-bold">
+              YourNextCar
+            </h1>
+          )}
         </div>
-        { ( !isLoginForm && !isSignupForm && !isCheckoutForm ) && (
+        {!isLoginForm && !isSignupForm && !isCheckoutForm && (
           <div className="hidden md:flex w-[50%]">{deskOptions}</div>
         )}
         {!isMobileForm && !isSignupForm && !isLoginForm && (
