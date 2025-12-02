@@ -19,6 +19,9 @@ function Header() {
   const isIntellectual = location.pathname === "/intellectual"
   const isLimit = location.pathname === "/limit"
   const isGovern = location.pathname === "/govern"
+  const isOurStory = location.pathname === "/ourstory"
+  const isOurTeam = location.pathname === "/ourteam"
+  const isChooseUs = location.pathname === "/choose"
 
   const deskOptions = !isProfilePage && !isEditProfile && !isContactInfo && !isTerms && (
     <div className="flex justify-around items-center w-full text-teal-950">
@@ -70,10 +73,13 @@ function Header() {
         isVehiclePrice ||
         isIntellectual ||
         isLimit ||
-        isGovern
+        isGovern ||
+        isOurStory ||
+        isOurTeam ||
+        isChooseUs
           ? ""
           : "border-gray-300 shadow-lg shadow-gray-400/65"
-      } ${isProfilePage || isEditProfile || isContactInfo || isTerms || isUseOfWebsite || isVehiclePrice || isIntellectual || isLimit || isGovern ? "" : "md:h-24"}`}
+      } ${isProfilePage || isEditProfile || isContactInfo || isTerms || isUseOfWebsite || isVehiclePrice || isIntellectual || isLimit || isGovern || isOurStory || isOurTeam || isChooseUs ? "" : "md:h-24"}`}
     >
       <div className="flex justify-between">
         <div
@@ -83,7 +89,7 @@ function Header() {
               : "flex items-center justify-start"
           }`}
         >
-          {!isProfilePage && !isEditProfile && !isContactInfo && !isTerms && !isUseOfWebsite && !isVehiclePrice && !isIntellectual && !isLimit && !isGovern && (
+          {!isProfilePage && !isEditProfile && !isContactInfo && !isTerms && !isUseOfWebsite && !isVehiclePrice && !isIntellectual && !isLimit && !isGovern && !isOurStory && !isOurTeam && !isChooseUs && (
             <img src="/images/carlogo.jpeg" alt="Carlogo" className="h-24" />
           )}
           {isProfilePage && (
@@ -93,16 +99,16 @@ function Header() {
               className="h-24 max-[430px]:block hidden"
             />
           )}
-          {!isProfilePage && !isEditProfile && !isContactInfo && !isTerms && !isUseOfWebsite && !isVehiclePrice && !isIntellectual && !isLimit && !isGovern && (
+          {!isProfilePage && !isEditProfile && !isContactInfo && !isTerms && !isUseOfWebsite && !isVehiclePrice && !isIntellectual && !isLimit && !isGovern && !isOurStory && !isOurTeam && !isChooseUs && (
             <h1 className="text-[1rem] md:text-xl text-blue-950 font-bold">
               YourNextCar
             </h1>
           )}
         </div>
-        {!isLoginForm && !isSignupForm && !isCheckoutForm && !isUseOfWebsite && !isVehiclePrice && !isIntellectual && !isLimit && !isGovern && (
+        {!isLoginForm && !isSignupForm && !isCheckoutForm && !isUseOfWebsite && !isVehiclePrice && !isIntellectual && !isLimit && !isGovern && !isOurStory && !isOurTeam && !isChooseUs && (
           <div className="hidden md:flex w-[50%]">{deskOptions}</div>
         )}
-        {!isMobileForm && !isSignupForm && !isLoginForm && !isEditProfile && !isContactInfo &&!isTerms && !isUseOfWebsite && !isVehiclePrice && !isIntellectual && !isLimit && !isGovern && (
+        {!isMobileForm && !isSignupForm && !isLoginForm && !isEditProfile && !isContactInfo &&!isTerms && !isUseOfWebsite && !isVehiclePrice && !isIntellectual && !isLimit && !isGovern && !isOurStory && !isOurTeam && !isChooseUs && (
           <button
             type="button"
             className="text-3xl text-blue-950 md:hidden p-4"
@@ -112,7 +118,7 @@ function Header() {
           </button>
         )}
       </div>
-      {!isMobileForm && !isSignupForm && !isLoginForm && !isEditProfile && !isContactInfo && !isTerms && !isUseOfWebsite && !isVehiclePrice && !isIntellectual && !isLimit && !isGovern && (
+      {!isMobileForm && !isSignupForm && !isLoginForm && !isEditProfile && !isContactInfo && !isTerms && !isUseOfWebsite && !isVehiclePrice && !isIntellectual && !isLimit && !isGovern && !isOurStory && !isOurTeam && !isChooseUs && (
         <div
           className={`flex flex-col items-center gap-1 text-sm overflow-hidden transition-all duration-300 ${
             isMenuOpen

@@ -1,22 +1,22 @@
 import React from "react";
-import { IoArrowBack } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { FaAngleLeft } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 function OurStory() {
-  return (
+    const navigate = useNavigate();
+  
+    return (
     <div className="bg-blue-950 text-white min-h-screen">
       <div className="mx-auto w-[90%] py-8">
 
         {/* Back Button */}
-        <div className="flex items-center gap-x-2 mb-6">
-          <Link to="/" className="text-white">
-            <IoArrowBack className="text-xl" />
-          </Link>
-          <p className="text-lg font-semibold">Our Story</p>
+        <div className="flex items-center justify-center relative mb-6 md:mb-7">
+            <FaAngleLeft onClick={() => navigate(-1)} className="absolute left-0 size-6 md:cursor-pointer" />
+          <p className="text-lg font-semibold md:text-xl">Our Story</p>
         </div>
 
         {/* Page Content */}
-        <div className="space-y-5 leading-7">
+        <div className="space-y-5 leading-7 md:leading-9">
 
           <p>
             <strong>YourNextCar</strong> began with a simple mission: to make the 
@@ -52,7 +52,7 @@ function OurStory() {
 
           <p>
             Thank you for choosing <strong>YourNextCar</strong>.  
-            Your journey begins here — and we’re honored to be part of it.
+            Your journey begins here — and we're honored to be part of it.
           </p>
 
         </div>

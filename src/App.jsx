@@ -23,6 +23,8 @@ import Intellectual from "./pages/Intellectual";
 import LimitLiability from "./pages/LimitLiability";
 import GoverningLaw from "./pages/GoverningLaw";
 import OurStory from "./pages/OurStory";
+import OurTeam from "./pages/OurTeam";
+import Choose from "./pages/Choose";
 
 
 function App() {
@@ -51,6 +53,8 @@ function App() {
             <Route path="/limit" element={<LimitLiability />} />
             <Route path="/govern" element={<GoverningLaw />} />
             <Route path="/ourstory" element={<OurStory />} />
+            <Route path="/ourteam" element={<OurTeam />} />
+            <Route path="/choose" element={<Choose />} />
           </Routes>
           <Footer />
         </Router>

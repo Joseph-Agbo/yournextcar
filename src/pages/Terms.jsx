@@ -11,7 +11,7 @@ function Terms() {
     <div className='bg-blue-950'>
         <div className='text-white space-y-7 pt-7 pb-10 mx-auto w-[90%]'>
             <div className='relative flex justify-center '>
-                <IoArrowBack onClick={() => navigate(-1)} className='absolute left-0 size-6 md:size-7' />
+                <IoArrowBack onClick={() => navigate(-1)} className='absolute left-0 size-6 md:size-7 md:cursor-pointer' />
                 <p className='font-semibold text-lg md:text-xl'>Terms & Conditions</p>
             </div>
             <p className='font-semibold md:text-lg'>Last Updated: December 1, 2025</p>

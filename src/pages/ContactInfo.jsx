@@ -16,7 +16,7 @@ function ContactInfo() {
           <div>
             <div className="relative flex justify-center text-2xl text-white mb-5">
               <p onClick={() => navigate(-1)}>
-                <FaAngleLeft className="absolute left-0 top-1" />
+                <FaAngleLeft className="absolute left-0 top-1 md:cursor-pointer" />
               </p>
               <p className="font-semibold">Contact Us</p>
             </div>
