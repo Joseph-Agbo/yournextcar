@@ -19,7 +19,7 @@ export default function ProductCard({ product }) {
   if (!product) return null
 
   return (
-    <Link to={`/productdetail/${product.id}`} className="border shrink-0 rounded-md p-3 shadow-sm bg-white text-slate-800 md:transform md:hover:scale-105 md:transition-all duration-200 ease-in-out">
+    <Link to={`/productdetail/${product.id}`} className="border shrink-0 rounded-md p-3 shadow-sm bg-white text-slate-800 md:transform md:hover:scale-105 md:transition-all duration-200 ease-in-out md:hover:bg-blue-200 md:hover:border-blue-200">
       <div className="h-40 w-full mb-2 overflow-hidden rounded">
         <img
           src={product.img}

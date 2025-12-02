@@ -16,11 +16,14 @@ import { PiCarProfileBold } from "react-icons/pi";
 import { TbJewishStarFilled } from "react-icons/tb";
 import { useState } from "react";
 import { FaMoon } from "react-icons/fa";
+import EditProfile from "../components/EditProfile";
+import { MdCancel } from "react-icons/md";
 
 function ProfilePage() {
   const { products } = useContext(ShopContext);
   const paid = products.filter((product) => product.paid);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [isEditOpen, setIsEditOpen] = useState(false);
 
   return (
     <div className="mx-auto w-[90%] pt-6 pb-4 md:pt-0 md:flex md:justify-between md:gap-8">
@@ -95,12 +98,19 @@ function ProfilePage() {
                 <p className="py-1 px-1 text-blue-900 rounded ">
                   Notifications
                 </p>
-                <p className="py-1 px-1 text-blue-900 rounded flex items-center gap-x-1 ">Dark Mode <FaMoon className="size-3" /> </p>
+                <p className="py-1 px-1 text-blue-900 rounded flex items-center gap-x-1 ">
+                  Dark Mode <FaMoon className="size-3" />{" "}
+                </p>
                 <p className="py-1 px-1 text-blue-900 rounded ">
                   Delete account
                 </p>
                 <p className="py-1 px-1 text-blue-900 rounded ">About YNC</p>
-                <p className="py-1 px-1 text-red-800 rounded ">Logout</p>
+                <Link
+                  to="/loginform"
+                  className="py-1 px-1 text-red-800 rounded md:text-2xl md:font-bold "
+                >
+                  Logout
+                </Link>
               </div>
             )}
           </section>
@@ -124,7 +134,9 @@ function ProfilePage() {
               your activity.
             </p>
             <button
+              type="button"
               title="Edit"
+              onClick={() => setIsEditOpen(!isEditOpen)}
               className="border rounded-md h-9 px-3 py-1 text-md cursor-pointer bg-blue-900 text-white"
             >
               Edit Profile
@@ -132,10 +144,14 @@ function ProfilePage() {
           </div>
           <div className="flex justify-between py-4">
             <p className="font-semibold md:font-bold">Personal Details</p>
-            <span className="flex items-center gap-x-1.5 md:hidden">
+            <button
+              type="button"
+              onClick={() => setIsEditOpen(!isEditOpen)}
+              className="flex items-center gap-x-1.5 md:hidden"
+            >
               <FaPen className="size-3.5 text-blue-900" />
               <span className="text-blue-900">Edit</span>
-            </span>
+            </button>
           </div>
           <div className="space-y-3">
             <hr className="text-gray-300" />
@@ -238,6 +254,22 @@ function ProfilePage() {
             <p className="text-red-500">Logout</p>
           </Link>
         </div>
+        {isEditOpen && (
+          <div className="fixed inset-0 bg-black/40 z-50 flex justify-center items-center px-4">
+            <div className="bg-white rounded-lg shadow-lg w-full max-w-md p-6 relative">
+              {/* Close Button */}
+              <button
+                title="Close"
+                onClick={() => setIsEditOpen(false)}
+                className="absolute top-3 right-3 hover:text-black text-xl md:cursor-pointer"
+              >
+                <MdCancel className="size-6"  />
+              </button>
+
+              <EditProfile onClose={() => setIsEditOpen(false)} />
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

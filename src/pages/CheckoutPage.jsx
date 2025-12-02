@@ -302,7 +302,7 @@ function CheckoutPage() {
             </div>
             <button
               type="submit"
-              className="md:cursor-pointer md:p-2.5 border rounded-md text-white bg-blue-950 text-lg p-2 w-full"
+              className="md:cursor-pointer md:p-2.5 border rounded-md text-white bg-blue-950 text-lg p-2 w-full md:hover:bg-blue-900 md:transition-all duration-300"
             >
               Pay Now
             </button>

@@ -24,7 +24,7 @@ function ProductDetail() {
                 <h1 className='font-bold text-xl text-blue-950'>{specificProduct?.name}</h1>
                 <p className='text-slate-600'>{specificProduct?.description}</p>
                 <p className='text-blue-950 flex items-center font-bold text-lg'><FaNairaSign />{specificProduct?.price}</p>
-                <Link to={`/checkout/${specificProduct?.id}`} ><button type='button' className='border rounded-sm w-full text-md p-2 bg-blue-950 text-white md:p-3 md:w-[80%] md:cursor-pointer'>Buy Now</button></Link>
+                <Link to={`/checkout/${specificProduct?.id}`} ><button type='button' className='border rounded-sm w-full text-md p-2 bg-blue-950 text-white md:p-3 md:w-[80%] md:cursor-pointer md:hover:bg-blue-900 md:transition-all duration-300'>Buy Now</button></Link>
             </div>
         </div>
         <RelatedProducts currentProductId={specificProduct?.id} currentProductBrand={specificProduct?.brand} />

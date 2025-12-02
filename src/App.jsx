@@ -12,11 +12,24 @@ import SignUpForm from "./components/SignUpForm";
 import LoginForm from "./components/LoginForm";
 import CheckoutPage from "./pages/CheckoutPage";
 import ProfilePage from "./pages/ProfilePage";
+import EditProfile from "./components/EditProfile";
+import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+import ContactInfo from "./pages/ContactInfo";
+import Terms from "./pages/Terms";
+import UseOfWebsite from "./pages/UseOfWebsite";
+import VehiclePrice from "./pages/VehiclePrice";
+import Intellectual from "./pages/Intellectual";
+import LimitLiability from "./pages/LimitLiability";
+import GoverningLaw from "./pages/GoverningLaw";
+import OurStory from "./pages/OurStory";
+
 
 function App() {
   return (
       <ShopProvider>
         <Router>
+          <ScrollToTop />
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -29,7 +42,17 @@ function App() {
             <Route path="/loginform" element={<LoginForm />} />
             <Route path="/checkout/:id" element={<CheckoutPage />} />
             <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/editprofile" element={<EditProfile />} />
+            <Route path="/contact" element={<ContactInfo />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/useofwebsite" element={<UseOfWebsite />} />
+            <Route path="/vehicleprice" element={<VehiclePrice />} />
+            <Route path="/intellectual" element={<Intellectual />} />
+            <Route path="/limit" element={<LimitLiability />} />
+            <Route path="/govern" element={<GoverningLaw />} />
+            <Route path="/ourstory" element={<OurStory />} />
           </Routes>
+          <Footer />
         </Router>
       </ShopProvider>
   );

@@ -11,8 +11,16 @@ function Header() {
   const isSignupForm = location.pathname === "/signupform";
   const isCheckoutForm = location.pathname.startsWith("/checkout");
   const isProfilePage = location.pathname === "/profile";
+  const isEditProfile = location.pathname === "/editprofile";
+  const isContactInfo = location.pathname === "/contact"
+  const isTerms = location.pathname === "/terms"
+  const isUseOfWebsite = location.pathname === "/useofwebsite"
+  const isVehiclePrice = location.pathname === "/vehicleprice"
+  const isIntellectual = location.pathname === "/intellectual"
+  const isLimit = location.pathname === "/limit"
+  const isGovern = location.pathname === "/govern"
 
-  const deskOptions = !isProfilePage && (
+  const deskOptions = !isProfilePage && !isEditProfile && !isContactInfo && !isTerms && (
     <div className="flex justify-around items-center w-full text-teal-950">
       <Link
         to="/"
@@ -54,10 +62,18 @@ function Header() {
         isLoginForm ||
         isSignupForm ||
         isCheckoutForm ||
-        isProfilePage
+        isProfilePage ||
+        isEditProfile ||
+        isContactInfo ||
+        isTerms ||
+        isUseOfWebsite ||
+        isVehiclePrice ||
+        isIntellectual ||
+        isLimit ||
+        isGovern
           ? ""
           : "border-gray-300 shadow-lg shadow-gray-400/65"
-      } ${isProfilePage ? "" : "md:h-24"}`}
+      } ${isProfilePage || isEditProfile || isContactInfo || isTerms || isUseOfWebsite || isVehiclePrice || isIntellectual || isLimit || isGovern ? "" : "md:h-24"}`}
     >
       <div className="flex justify-between">
         <div
@@ -67,7 +83,7 @@ function Header() {
               : "flex items-center justify-start"
           }`}
         >
-          {!isProfilePage && (
+          {!isProfilePage && !isEditProfile && !isContactInfo && !isTerms && !isUseOfWebsite && !isVehiclePrice && !isIntellectual && !isLimit && !isGovern && (
             <img src="/images/carlogo.jpeg" alt="Carlogo" className="h-24" />
           )}
           {isProfilePage && (
@@ -77,16 +93,16 @@ function Header() {
               className="h-24 max-[430px]:block hidden"
             />
           )}
-          {!isProfilePage && (
+          {!isProfilePage && !isEditProfile && !isContactInfo && !isTerms && !isUseOfWebsite && !isVehiclePrice && !isIntellectual && !isLimit && !isGovern && (
             <h1 className="text-[1rem] md:text-xl text-blue-950 font-bold">
               YourNextCar
             </h1>
           )}
         </div>
-        {!isLoginForm && !isSignupForm && !isCheckoutForm && (
+        {!isLoginForm && !isSignupForm && !isCheckoutForm && !isUseOfWebsite && !isVehiclePrice && !isIntellectual && !isLimit && !isGovern && (
           <div className="hidden md:flex w-[50%]">{deskOptions}</div>
         )}
-        {!isMobileForm && !isSignupForm && !isLoginForm && (
+        {!isMobileForm && !isSignupForm && !isLoginForm && !isEditProfile && !isContactInfo &&!isTerms && !isUseOfWebsite && !isVehiclePrice && !isIntellectual && !isLimit && !isGovern && (
           <button
             type="button"
             className="text-3xl text-blue-950 md:hidden p-4"
@@ -96,7 +112,7 @@ function Header() {
           </button>
         )}
       </div>
-      {!isMobileForm && !isSignupForm && !isLoginForm && (
+      {!isMobileForm && !isSignupForm && !isLoginForm && !isEditProfile && !isContactInfo && !isTerms && !isUseOfWebsite && !isVehiclePrice && !isIntellectual && !isLimit && !isGovern && (
         <div
           className={`flex flex-col items-center gap-1 text-sm overflow-hidden transition-all duration-300 ${
             isMenuOpen

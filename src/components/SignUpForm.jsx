@@ -146,7 +146,7 @@ function SignUpForm() {
           </div>
           <button
             type="submit"
-            className="w-[95%] cursor-pointer border rounded-md text-white bg-blue-950 text-lg p-3"
+            className="w-[95%] cursor-pointer border rounded-md text-white bg-blue-950 text-lg p-3 md:hover:bg-blue-900 md:transition-all duration-300"
           >
             Sign up
           </button>
