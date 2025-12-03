@@ -26,7 +26,7 @@ function ProfilePage() {
   const [isEditOpen, setIsEditOpen] = useState(false);
 
   return (
-    <div className="mx-auto w-[90%] pt-6 pb-4 md:pt-0 md:flex md:justify-between md:gap-8">
+    <div className="mx-auto w-[90%] pt-6 pb-4 md:-mt-28 md:flex md:justify-between md:gap-8 ">
       <div className="hidden md:block mx-auto w-[50%]">
         <div className="flex items-center gap-x-1 px-5 py-3">
           <div className="size-8">

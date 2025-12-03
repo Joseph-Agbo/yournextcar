@@ -156,7 +156,7 @@ function CheckoutPage() {
   if (!specificProduct) return <p>Loading... </p>;
 
   return (
-    <div className="pb-3 bg-indigo-50/50">
+    <div className="pb-3 bg-indigo-50/50 pt-1 md:pt-0">
       <h1 className="mx-auto w-[80%] py-3 text-lg md:w-[73%]">
         Cashier Says Hi!
       </h1>

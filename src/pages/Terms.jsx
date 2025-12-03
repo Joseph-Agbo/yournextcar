@@ -8,7 +8,7 @@ function Terms() {
     const navigate = useNavigate();
   
     return (
-    <div className='bg-blue-950'>
+    <div className='bg-blue-950 -mt-20 md:-mt-23'>
         <div className='text-white space-y-7 pt-7 pb-10 mx-auto w-[90%]'>
             <div className='relative flex justify-center '>
                 <IoArrowBack onClick={() => navigate(-1)} className='absolute left-0 size-6 md:size-7 md:cursor-pointer' />

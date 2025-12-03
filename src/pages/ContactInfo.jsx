@@ -10,7 +10,7 @@ function ContactInfo() {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-blue-950">
+    <div className="bg-blue-950 -mt-20 md:-mt-23">
       <div className="mx-auto w-[90%] bg-blue-950">
         <div className="pt-6 pb-10 space-y-7">
           <div>

@@ -61,7 +61,7 @@ function MobileForm() {
   };
 
   return (
-    <div className="flex flex-col gap-4 items-center">
+    <div className="flex flex-col gap-y-4 items-center pt-7 px-4">
       <h2 className="text-xl font-semibold">Log in or sign up</h2>
       <hr className="w-full leading-1.0" />
       <div className="mx-auto">

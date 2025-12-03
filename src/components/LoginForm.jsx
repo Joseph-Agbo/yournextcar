@@ -1,9 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { ImCancelCircle } from "react-icons/im";
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import { AiOutlineEye } from "react-icons/ai";
-import { AiOutlineEyeInvisible } from "react-icons/ai";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 
 function LoginForm() {
   const [showPassword, setShowPassWord] = useState(false);
@@ -16,18 +14,10 @@ function LoginForm() {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[^A-Za-z0-9]).+$/;
 
-  const retrieveEmail = (e) => {
-    setEmail(e.target.value);
-  };
-  const retrievePassWord = (e) => {
-    setPassWord(e.target.value);
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
     let valid = true;
-
     setEmailError("");
     setPasswordError("");
 
@@ -40,7 +30,7 @@ function LoginForm() {
     }
 
     if (!passWord) {
-      setPasswordError("password is required");
+      setPasswordError("Password is required");
       valid = false;
     } else if (passWord.length < 8) {
       setPasswordError("Enter at least 8 characters");
@@ -52,63 +42,76 @@ function LoginForm() {
 
     if (!valid) return;
 
-    alert("Login successfull!");
-
+    alert("Login Successful!");
     setEmail("");
     setPassWord("");
   };
 
   return (
-    <div className="py-8">
-      <h1 className="py-8 px-2 text-lg font-semibold text-center">
+    <div className="py-8 px-4 pt-8 md:pt-10">
+      {/* Cancel Button (Mobile friendly) */}
+      <Link
+        to="/"
+        title="Home"
+        className="absolute top-26 right-4 md:top-25 md:right-85"
+      >
+        <ImCancelCircle className="size-8 text-gray-500 hover:text-gray-700 transition" />
+      </Link>
+
+      <h1 className="py-8 text-2xl font-semibold text-center text-blue-950">
         Welcome to YNC
       </h1>
+
       <form
         onSubmit={handleSubmit}
-        className="mb-5 flex flex-col gap-5 items-center"
+        className="mb-5 flex flex-col gap-5 items-center w-full"
       >
+        {/* EMAIL */}
         <input
           type="email"
           value={email}
-          onChange={retrieveEmail}
+          onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your e-mail"
-          className="w-[40%] p-3 border rounded-md bg-white text-blue-950 text-md outline-blue-950"
+          className="w-full max-w-md p-4 border rounded-md bg-white text-blue-950 text-lg outline-blue-950"
         />
         {emailError && <p className="text-red-500 text-sm">{emailError}</p>}
-        <div className="relative w-[40%]">
+
+        {/* PASSWORD */}
+        <div className="relative w-full max-w-md">
           <input
             type={showPassword ? "text" : "password"}
             value={passWord}
-            onChange={retrievePassWord}
+            onChange={(e) => setPassWord(e.target.value)}
             placeholder="Enter your password"
-            className="w-full p-3 border rounded-md bg-white text-blue-950 text-md outline-blue-950"
+            className="w-full p-4 border rounded-md bg-white text-blue-950 text-lg outline-blue-950"
           />
-          {passwordError && (
-            <p className="text-red-500 text-sm">{passwordError}</p>
-          )}
+
           <button
             type="button"
             onClick={() => setShowPassWord(!showPassword)}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-xl text-blue-900"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-2xl text-blue-900"
           >
             {showPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
           </button>
         </div>
+        {passwordError && (
+          <p className="text-red-500 text-sm">{passwordError}</p>
+        )}
+
+        {/* LOGIN BUTTON */}
         <button
           type="submit"
-          className="w-[40%] cursor-pointer border rounded-md text-white bg-blue-950 text-lg p-3 md:hover:bg-blue-900 md:transition-all duration-300"
+          className="w-full max-w-md cursor-pointer border rounded-md text-white bg-blue-950 text-xl p-4 md:hover:bg-blue-900 transition"
         >
           Log in
         </button>
-        <p className="text-blue-950 text-md">
+
+        <p className="text-blue-950 text-md text-center">
           Don't have an account with us?{" "}
           <Link to="/signupform" className="underline cursor-pointer">
             Sign up
-          </Link>{" "}
+          </Link>
         </p>
-        <Link to="/" title="Home" className="relative z-10 left-58 bottom-95" type="button">
-          <ImCancelCircle className="size-8 bg-gray-50 text-gray-500" />
-        </Link>
       </form>
     </div>
   );

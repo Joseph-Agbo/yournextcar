@@ -25,6 +25,8 @@ import GoverningLaw from "./pages/GoverningLaw";
 import OurStory from "./pages/OurStory";
 import OurTeam from "./pages/OurTeam";
 import Choose from "./pages/Choose";
+import CustomerReviews from "./pages/CustomerReviews";
+import Delivery from "./pages/Delivery";
 
 
 function App() {
@@ -33,7 +35,8 @@ function App() {
         <Router>
           <ScrollToTop />
           <Header />
-          <Routes>
+          <div className="pt-20 md:pt-23">
+            <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<ProductPage />} />
             <Route path="/productdetail/:id" element={<ProductDetail />} />
@@ -55,7 +58,10 @@ function App() {
             <Route path="/ourstory" element={<OurStory />} />
             <Route path="/ourteam" element={<OurTeam />} />
             <Route path="/choose" element={<Choose />} />
+            <Route path="/reviews" element={<CustomerReviews />} />
+            <Route path="/delivery" element={<Delivery />} />
           </Routes>
+          </div>
           <Footer />
         </Router>
       </ShopProvider>

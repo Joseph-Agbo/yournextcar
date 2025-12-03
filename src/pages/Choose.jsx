@@ -6,7 +6,7 @@ function Choose() {
     const navigate = useNavigate()
   
     return (
-    <div className="bg-blue-950 text-white min-h-screen">
+    <div className="bg-blue-950 text-white min-h-screen -mt-20 md:-mt-23">
       <div className="mx-auto w-[90%] py-8">
 
         {/* Back Button */}
