@@ -7,7 +7,7 @@ function GoverningLaw() {
   
   
     return (
-    <div className="bg-blue-950 text-white min-h-screen [@media(min-width:768px)_and_(max-width:950px)]:-mt-23">
+    <div className="bg-blue-950 text-white min-h-screen -mt-20 md:-mt-23 [@media(min-width:768px)_and_(max-width:950px)]:-mt-23">
       <div className="mx-auto w-[90%] py-8">
 
         {/* Header */}
