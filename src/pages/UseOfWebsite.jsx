@@ -7,7 +7,7 @@ function UseOfWebsite() {
   
   
   return (
-    <div className="bg-blue-950 text-white">
+    <div className="bg-blue-950 text-white [@media(min-width:768px)_and_(max-width:950px)]:-mt-23">
       <div className="mx-auto w-[90%] pt-6 pb-10">
         <div className="flex justify-center items-center relative mb-7">
           <IoArrowBack onClick={() => navigate(-1)} className="absolute left-0 size-5 md:size-7 md:cursor-pointer" />

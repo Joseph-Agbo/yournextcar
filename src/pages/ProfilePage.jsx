@@ -26,8 +26,8 @@ function ProfilePage() {
   const [isEditOpen, setIsEditOpen] = useState(false);
 
   return (
-    <div className="mx-auto w-[90%] pt-6 pb-4 md:-mt-28 md:flex md:justify-between md:gap-8 ">
-      <div className="hidden md:block mx-auto w-[50%]">
+    <div className="mx-auto w-[90%] pt-6 pb-4 md:-mt-28 md:flex md:justify-between md:gap-8 [@media(min-width:768px)_and_(max-width:950px)]:mx-0 [@media(min-width:768px)_and_(max-width:950px)]:w-full [@media(min-width:768px)_and_(max-width:950px)]:flex [@media(min-width:768px)_and_(max-width:950px)]:justify-between [@media(min-width:768px)_and_(max-width:950px)]:gap-4 [@media(min-width:768px)_and_(max-width:950px)]:px-3 [@media(min-width:768px)_and_(max-width:950px)]:pb-0">
+      <div className="hidden md:block mx-auto w-[50%] [@media(min-width:768px)_and_(max-width:950px)]:w-[30%]">
         <div className="flex items-center gap-x-1 px-5 py-3">
           <div className="size-8">
             <img src="/images/carlogo.jpeg" alt="CarLogo" />
@@ -67,7 +67,7 @@ function ProfilePage() {
           <Link to="/loginform">
             <button
               title="Logout"
-              className="flex items-center mt-88 gap-x-2 p-2 ml-5 rounded-md w-[80%] hover:border hover:border-blue-200 text-red-600 hover:text-blue-900 cursor-pointer hover:bg-blue-200"
+              className="flex items-center mt-88 gap-x-2 p-2 ml-5 rounded-md w-[80%] hover:border hover:border-blue-200 text-red-600 hover:text-blue-900 cursor-pointer hover:bg-blue-200 [@media(min-width:768px)_and_(max-width:950px)]:mt-167"
             >
               <IoIosLogOut className="text-blue-950" />
               Logout
@@ -75,7 +75,7 @@ function ProfilePage() {
           </Link>
         </div>
       </div>
-      <div className="space-y-7">
+      <div className="space-y-7 [@media(min-width:768px)_and_(max-width:950px)]:w-[70%]">
         <div className="flex justify-between items-center">
           <section>
             <Link to="/">
@@ -160,7 +160,7 @@ function ProfilePage() {
               <span className="hidden md:flex">
                 Full Name <br /> Agbo Joseph
               </span>{" "}
-              <span className="hidden md:flex md:pr-50">
+              <span className="hidden md:flex md:pr-50 [@media(min-width:768px)_and_(max-width:950px)]:px-2">
                 Email <br /> xavimoney500@gmail.com
               </span>
               <span className="md:hidden">Joseph Agbo</span>
@@ -171,7 +171,7 @@ function ProfilePage() {
               <span className="hidden md:flex">
                 Phone Number <br /> 09046561376
               </span>{" "}
-              <span className="hidden md:flex md:pr-42">
+              <span className="hidden md:flex md:pr-42 [@media(min-width:768px)_and_(max-width:950px)]:px-2">
                 Address <br /> No 27 Emeofor Street Abakaliki
               </span>
               <span className="md:hidden">09046561376</span>
@@ -183,7 +183,7 @@ function ProfilePage() {
           </div>
           <div className="space-y-4 py-6">
             <h2 className="font-bold">My Purchased Cars</h2>
-            <div className="flex overflow-x-auto gap-4 md:grid md:grid-cols-3 md:gap-4 md:overflow-visible">
+            <div className="flex overflow-x-auto gap-4 md:grid md:grid-cols-3 md:gap-4 md:overflow-visible [@media(min-width:768px)_and_(max-width:950px)]:grid [@media(min-width:768px)_and_(max-width:950px)]:grid-cols-2 [@media(min-width:768px)_and_(max-width:950px)]:gap-3">
               {paid.map((product) => (
                 <ProductCard key={product.id} product={product} />
               ))}

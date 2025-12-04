@@ -162,7 +162,7 @@ function CheckoutPage() {
       </h1>
       <form
         onSubmit={handleSubmit}
-        className="mx-auto w-[80%] bg-white md:flex md:justify-around"
+        className="mx-auto w-[80%] bg-white md:flex md:justify-around [@media(min-width:768px)_and_(max-width:950px)]:w-full [@media(min-width:768px)_and_(max-width:950px)]:mx-0 [@media(min-width:768px)_and_(max-width:950px)]:px-3 [@media(min-width:768px)_and_(max-width:950px)]:space-x-2"
       >
         <div className="space-y-2 md:w-[40%]">
           <div className="flex justify-between ">

@@ -7,6 +7,7 @@ import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 import { FaAnglesUp } from "react-icons/fa6";
+import ScrollingAnime from "../components/ScrollingAnime";
 
 function Home() {
   const { products, trending, topselling, newinventory, loading, error } =
@@ -48,7 +49,7 @@ function Home() {
       </div>
       {/* Mobile-only horizontal search bar placed before title */}
       <div className="w-full flex justify-center md:hidden pt-6">
-        <div className="w-[95%] flex items-center gap-3 bg-white/90 rounded-full px-3 py-2 border border-gray-400 shadow-lg shadow-indigo-300">
+        <div className="w-[95%] flex items-center gap-3 bg-white/90 rounded-full px-3 py-3 border border-gray-400 shadow-lg shadow-indigo-300">
           <AiOutlineSearch className="text-gray-500 text-xl" />
           <input
             type="search"
@@ -59,6 +60,9 @@ function Home() {
             aria-label="Search your car"
           />
         </div>
+      </div>
+      <div className="mt-9 md:mt-0">
+        <ScrollingAnime />
       </div>
       <div className="max-w-6xl mx-auto px-4 py-10">
         {loading && <p className="text-center">Loading products…</p>}
@@ -145,7 +149,7 @@ function Home() {
         </Link>
       </div>
       <Link to="/profile">
-        <div className="border border-pink-950 w-[20%] rounded-md flex justify-center items-center p-4 bg-pink-950 fixed top-1/2 left-3.5 z-10 md:size-20 md:w-[9%] md:hover:bg-blue-900 md:transition-all duration-300 ">
+        <div className="border border-pink-950 w-[20%] rounded-md flex justify-center items-center p-4 bg-pink-950 fixed top-1/2 left-3.5 z-10 md:size-20 md:w-[9%] md:hover:bg-blue-900 md:transition-all duration-300 [@media(min-width:768px)_and_(max-width:950px)]:w-[11%]">
           <CgProfile className="size-10 bg-gray-200 text-teal-800 rounded-lg max-[330px]:size-8" />
         </div>
       </Link>

@@ -6,7 +6,7 @@ function VehiclePrice() {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-blue-950 text-white min-h-screen">
+    <div className="bg-blue-950 text-white min-h-screen [@media(min-width:768px)_and_(max-width:950px)]:-mt-23">
       <div className="mx-auto w-[90%] py-6 space-y-7">
         {/* Header */}
         <div className="flex items-center justify-center relative">
