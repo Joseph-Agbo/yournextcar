@@ -3,7 +3,6 @@ import { useContext } from "react";
 import ShopContext from "../context/ShopContext";
 import ProductCard from "../components/ProductCard";
 import { Link } from "react-router-dom";
-import { CgProfile } from "react-icons/cg";
 import { FaAnglesUp } from "react-icons/fa6";
 
 function UsedCars() {
@@ -28,11 +27,6 @@ function UsedCars() {
         >
           View more Cars
         </button>
-      </Link>
-      <Link to="/profile">
-        <div className="border border-pink-950 w-[20%] rounded-md flex justify-center items-center p-4 bg-pink-950 fixed top-1/2 left-3.5 z-10 md:size-20 md:w-[9%] md:hover:bg-blue-900 md:transition-all duration-300 [@media(min-width:768px)_and_(max-width:950px)]:w-[11%] ">
-          <CgProfile className="size-10 bg-gray-200 text-teal-800 rounded-lg max-[330px]:size-8" />
-        </div>
       </Link>
        <Link onClick={() => window.scrollTo({top: 0, behavior : "smooth"})} className="fixed bottom-2 right-2.5 z-10 md:right-3.5">
         <FaAnglesUp className="size-10 text-teal-500 md:hover:text-indigo-500" />

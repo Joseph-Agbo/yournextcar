@@ -45,12 +45,24 @@ export function ShopProvider({ children }) {
   const trending = products.filter((p) => Boolean(p.trending));
   const topselling = products.filter((p) => Boolean(p.topselling));
   const newinventory = products.filter((p) => Boolean(p.newinventory));
+  const sedan = products.filter((p) => Boolean(p.sedan));
+  const suv = products.filter((p) => Boolean(p.suv));
+  const truck = products.filter((p) => Boolean(p.truck));
+  const firstRange = products.filter((p) => Boolean(p.rangeone));
+  const secondRange = products.filter((p) => Boolean(p.rangetwo));
+  const thirdRange = products.filter((p) => Boolean(p.rangethree));
 
   const value = {
     products,
     trending,
     topselling,
     newinventory,
+    sedan,
+    suv,
+    truck,
+    firstRange,
+    secondRange,
+    thirdRange,
     loading,
     error,
   };

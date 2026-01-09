@@ -29,33 +29,33 @@ function Header() {
     <div className="flex justify-around items-center w-full text-teal-950">
       <Link
         to="/"
-        className="px-8 border-r-2 border-gray-500 pb-1 inline-block md:hover:border-r-0 md:hover:border-b-8 md:hover:border-blue-950 transition-all duration-200"
+        className="px-8 pb-2 inline-block border-b-8 border-transparent mt-5 md:hover:border-blue-950 transition-all duration-200"
       >
         Home
       </Link>
       <Link
         to="/newcars"
-        className="px-4 border-r-2 border-gray-500 pb-1 inline-block md:hover:border-r-0 md:hover:border-b-8 md:hover:border-blue-950 transition-all duration-200"
+        className="px-4 pb-2 inline-block border-b-8 border-transparent mt-5 md:hover:border-blue-950 transition-all duration-200"
       >
         <span className="hidden [@media(min-width:768px)_and_(max-width:950px)]:inline">New</span>
         <span className="inline [@media(min-width:768px)_and_(max-width:950px)]:hidden">New Cars</span>
       </Link>
       <Link
         to="/usedcars"
-        className="px-4 border-r-2 border-gray-500 inline-block pb-1 md:hover:border-r-0 md:hover:border-b-8 md:hover:border-blue-950 transition-all duration-200"
+        className="px-4 inline-block pb-2 border-b-8 border-transparent mt-5 md:hover:border-blue-950 transition-all duration-200"
       >
         <span className="hidden [@media(min-width:768px)_and_(max-width:950px)]:inline">Used</span>
         <span className="inline [@media(min-width:768px)_and_(max-width:950px)]:hidden">Used Cars</span>
       </Link>
       <Link
         to="/loginform"
-        className="px-4 border-r-2 [@media(min-width:768px)_and_(max-width:950px)]:hidden border-gray-500 inline-block pb-1 md:hover:border-r-0 md:hover:border-b-8 md:hover:border-blue-950 transition-all duration-200"
+        className="px-4 [@media(min-width:768px)_and_(max-width:950px)]:hidden inline-block pb-2 border-b-8 border-transparent mt-5 md:hover:border-blue-950 transition-all duration-200"
       >
         Login
       </Link>
       <Link
         to="/signupform"
-        className="px-4 md:hover:border-b-8 pb-1 inline-block md:hover:border-blue-950 transition-all duration-200"
+        className="px-4 border-b-8 border-transparent mt-5 pb-2 inline-block md:hover:border-blue-950 transition-all duration-200"
       >
         Sign Up
       </Link>
@@ -66,8 +66,6 @@ function Header() {
     <div
       className={`${
         isMobileForm ||
-        isLoginForm ||
-        isSignupForm ||
         isCheckoutForm ||
         isProfilePage ||
         isEditProfile ||
@@ -87,11 +85,11 @@ function Header() {
           : "border-gray-300 shadow-lg shadow-gray-400/65"
       } ${isProfilePage || isEditProfile || isContactInfo || isTerms || isUseOfWebsite || isVehiclePrice || isIntellectual || isLimit || isGovern || isOurStory || isOurTeam || isChooseUs || isReviews || isDelivery ? "" : "md:h-24"} fixed top-0 z-30 w-full bg-white`}
     >
-      <div className="flex justify-between">
+      <div className="flex justify-between items-center">
         <div
           className={`${
             isLoginForm || isSignupForm
-              ? "flex items-center justify-start px-10"
+              ? "flex items-center justify-start"
               : "flex items-center justify-start"
           }`}
         >
@@ -111,10 +109,10 @@ function Header() {
             </h1>
           )}
         </div>
-        {!isLoginForm && !isSignupForm && !isCheckoutForm && !isUseOfWebsite && !isVehiclePrice && !isIntellectual && !isLimit && !isGovern && !isOurStory && !isOurTeam && !isChooseUs && !isReviews && !isDelivery && (
+        {!isCheckoutForm && !isUseOfWebsite && !isVehiclePrice && !isIntellectual && !isLimit && !isGovern && !isOurStory && !isOurTeam && !isChooseUs && !isReviews && !isDelivery && (
           <div className="hidden md:flex w-[50%]">{deskOptions}</div>
         )}
-        {!isMobileForm && !isSignupForm && !isLoginForm && !isEditProfile && !isContactInfo &&!isTerms && !isUseOfWebsite && !isVehiclePrice && !isIntellectual && !isLimit && !isGovern && !isOurStory && !isOurTeam && !isChooseUs && !isReviews && !isDelivery && (
+        {!isEditProfile && !isContactInfo &&!isTerms && !isUseOfWebsite && !isVehiclePrice && !isIntellectual && !isLimit && !isGovern && !isOurStory && !isOurTeam && !isChooseUs && !isReviews && !isDelivery && (
           <button
             type="button"
             className="text-3xl text-blue-950 md:hidden p-4"
@@ -124,11 +122,11 @@ function Header() {
           </button>
         )}
       </div>
-      {!isMobileForm && !isSignupForm && !isLoginForm && !isEditProfile && !isContactInfo && !isTerms && !isUseOfWebsite && !isVehiclePrice && !isIntellectual && !isLimit && !isGovern && !isOurStory && !isOurTeam && !isChooseUs && !isReviews && !isDelivery && (
+      {!isEditProfile && !isContactInfo && !isTerms && !isUseOfWebsite && !isVehiclePrice && !isIntellectual && !isLimit && !isGovern && !isOurStory && !isOurTeam && !isChooseUs && !isReviews && !isDelivery && (
         <div
           className={`flex flex-col items-center gap-1 text-sm overflow-hidden transition-all duration-300 ${
             isMenuOpen
-              ? "h-28 opacity-100 bg-linear-to-r from-gray-50 to-indigo-50"
+              ? "h-32 py-1 opacity-100 bg-linear-to-r from-gray-50 to-indigo-50"
               : "h-0 opacity-0"
           } md:hidden`}
         >
@@ -149,6 +147,12 @@ function Header() {
             className="text-indigo-800 transition-colors duration-200"
           >
             Used Cars
+          </Link>
+          <Link
+            to="/carprice"
+            className="text-indigo-800 transition-colors duration-200"
+          >
+            Cars by Price
           </Link>
           <Link
             to="/mobileform"

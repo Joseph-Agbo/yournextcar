@@ -27,6 +27,7 @@ import OurTeam from "./pages/OurTeam";
 import Choose from "./pages/Choose";
 import CustomerReviews from "./pages/CustomerReviews";
 import Delivery from "./pages/Delivery";
+import CarsByPrice from "./components/CarsByPrice";
 
 
 function App() {
@@ -60,6 +61,7 @@ function App() {
             <Route path="/choose" element={<Choose />} />
             <Route path="/reviews" element={<CustomerReviews />} />
             <Route path="/delivery" element={<Delivery />} />
+            <Route path="/carprice" element={<CarsByPrice />} />
           </Routes>
           </div>
           <Footer />

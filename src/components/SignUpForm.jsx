@@ -82,7 +82,7 @@ function SignUpForm() {
   };
 
   return (
-    <div className="flex flex-col gap-y-4 px-4 items-center">
+    <div className="flex flex-col gap-y-4 px-4 items-center pt-5 md:pt-6">
       <div className="mx-auto">
         <h1 className="py-7 px-2 text-lg text-center font-bold text-blue-900">
           Welcome to YNC

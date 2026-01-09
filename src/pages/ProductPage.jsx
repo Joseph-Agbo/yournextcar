@@ -1,23 +1,26 @@
 import React, { useContext, useState } from "react";
 import ShopContext from "../context/ShopContext";
 import ProductCard from "../components/ProductCard";
-import { Link } from "react-router-dom";
-import { CgProfile } from "react-icons/cg";
+import { useLocation, Link } from "react-router-dom";
 import { FaAnglesUp } from "react-icons/fa6";
 
 export default function ProductPage() {
   const { products, loading, error } = useContext(ShopContext);
   const [query, setQuery] = useState("");
+
   // Filter all cars
-  const allcars = products.filter((p) => p && p.allcars);
+  const location = useLocation();
+  const filteredProductsFromHome = location.state?.filteredProducts;
+
+  const baseCars = filteredProductsFromHome
+    ? filteredProductsFromHome
+    : products.filter((p) => p && p.allcars);
+    
   const filtered = query.trim()
-    ? allcars.filter(
-        (p) =>
-          p &&
-          p.name &&
-          p.name.toLowerCase().includes(query.trim().toLowerCase())
+    ? baseCars.filter((p) =>
+        p?.name?.toLowerCase().includes(query.trim().toLowerCase())
       )
-    : allcars;
+    : baseCars;
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8 mb-4 md:mb-6">
@@ -47,7 +50,7 @@ export default function ProductPage() {
           />
         </div>
       </div>
-      <h1 className="text-3xl font-bold mb-8 mt-3 text-blue-950">All Cars</h1>
+      <h1 className="text-3xl font-bold mb-8 mt-3 text-blue-950">{filteredProductsFromHome ? `Showing ${baseCars.length} cars` : "All Cars"}</h1>
       {loading && <p className="text-center">Loading cars…</p>}
       {error && <p className="text-center text-red-600">Error: {error}</p>}
       {!loading && !error && (
@@ -59,11 +62,6 @@ export default function ProductPage() {
           )}
         </div>
       )}
-      <Link to="/profile">
-        <div className="border border-pink-950 w-[20%] rounded-md flex justify-center items-center p-4 bg-pink-950 fixed top-1/2 left-3.5 z-10 md:size-20 md:w-[9%] md:hover:bg-blue-900 md:transition-all duration-300 [@media(min-width:768px)_and_(max-width:950px)]:w-[11%]">
-          <CgProfile className="size-10 bg-gray-200 text-teal-800 rounded-lg max-[330px]:size-8" />
-        </div>
-      </Link>
       <Link
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         className="fixed bottom-2 right-2.5 z-10 md:right-3.5"

@@ -44,7 +44,7 @@ function Footer() {
         !isMobileForm &&
         !isCheckoutForm && (
           <div className="bg-blue-950 ">
-            <div className="bg-blue-950 text-white mx-auto w-[90%] md:flex md:flex-col">
+            <div className="bg-blue-950 text-white mx-auto w-[90%] md:w-[97%] md:flex md:flex-col [@media(min-width:768px)_and_(max-width:950px)]:w-[96%]">
               <div className="flex gap-2 pt-5 md:mb-5 md:pt-7">
                 <div>
                   <img

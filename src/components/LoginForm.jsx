@@ -48,16 +48,7 @@ function LoginForm() {
   };
 
   return (
-    <div className="py-8 px-4 pt-8 md:pt-10">
-      {/* Cancel Button (Mobile friendly) */}
-      <Link
-        to="/"
-        title="Home"
-        className="absolute top-26 right-4 md:top-25 md:right-85 [@media(min-width:768px)_and_(max-width:950px)]:right-40"
-      >
-        <ImCancelCircle className="size-8 text-gray-500 hover:text-gray-700 transition" />
-      </Link>
-
+    <div className="py-8 px-4 pt-7 md:pt-10">
       <h1 className="py-8 text-2xl font-semibold text-center text-blue-950">
         Welcome to YNC
       </h1>
